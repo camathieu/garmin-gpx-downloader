@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Download GPX files from Garmin Connect course links."
+    >
+    <title>Garmin GPX Downloader</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="app-card" aria-labelledby="page-title">
+        <div class="content">
+          <div class="brand-row">
+            <div class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M7 22.2 14.1 7l4.7 10.1L25 11.4" />
+                <circle cx="7" cy="22.2" r="2.2" />
+                <circle cx="14.1" cy="7" r="2.2" />
+                <circle cx="18.8" cy="17.1" r="2.2" />
+                <circle cx="25" cy="11.4" r="2.2" />
+              </svg>
+            </div>
+            <p>Garmin Connect</p>
+          </div>
+
+          <h1 id="page-title">Garmin GPX Downloader</h1>
+
+          <form id="download-form" class="download-form" novalidate>
+            <label for="course-url">Course link</label>
+            <div class="input-row">
+              <input
+                id="course-url"
+                name="course-url"
+                type="url"
+                inputmode="url"
+                autocomplete="url"
+                placeholder="https://connect.garmin.com/app/course/469269206"
+                required
+              >
+              <button type="submit">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 3v12" />
+                  <path d="m7 10 5 5 5-5" />
+                  <path d="M5 21h14" />
+                </svg>
+                <span>Download GPX</span>
+              </button>
+            </div>
+            <p id="status" class="status" role="status" aria-live="polite"></p>
+          </form>
+
+          <p class="note">
+            Garmin may ask you to sign in before the file starts.
+          </p>
+        </div>
+
+        <svg class="route-art" viewBox="0 0 420 240" aria-hidden="true">
+          <path class="contour" d="M18 206c48-42 82-42 126 0s79 43 126 0 84-43 132 0" />
+          <path class="contour" d="M18 159c48-42 82-42 126 0s79 43 126 0 84-43 132 0" />
+          <path class="contour" d="M18 112c48-42 82-42 126 0s79 43 126 0 84-43 132 0" />
+          <path class="contour" d="M18 65c48-42 82-42 126 0s79 43 126 0 84-43 132 0" />
+          <path class="route" d="M56 191c34-60 76-86 124-76 58 12 71-66 124-72 34-4 56 14 76 48" />
+          <circle class="route-dot" cx="56" cy="191" r="7" />
+          <circle class="route-dot" cx="380" cy="91" r="7" />
+        </svg>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
